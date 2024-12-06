@@ -1,5 +1,5 @@
 ---
-title: Our Coffee
+title: News
 type: news
 image: /img/products-jumbotron.jpg
 intro:
