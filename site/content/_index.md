@@ -19,8 +19,8 @@ blurb:
 intro:
   heading: " "
   text: " "
-products: []
-values:
+news: []
+confs:
   heading: Our values
   text: Coffee is an amazing part of human culture but it has a dark side too –
     one of colonialism and mindless abuse of natural resources and human lives.
