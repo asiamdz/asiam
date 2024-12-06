@@ -6,6 +6,7 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
+  
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
@@ -17,6 +18,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  
   - name: "pages"
     label: "Pages"
     files:
@@ -39,6 +41,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
+    
       - file: "site/content/aboutus/_index.md"
         label: "About Page"
         name: "aboutus"
@@ -56,6 +59,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
+                
       - file: "site/content/news/_index.md"
         label: "News Page"
         name: "news"
@@ -67,6 +71,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+   
       - file: "site/content/confs/_index.md"
         label: "Confs Page"
         name: "confs"
@@ -80,15 +85,18 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
+ 
   - name: "site_settings"
     label: "Site Settings"
     files:
+      
       - file: "site/data/footer.json"
         label: Footer
         name: footer
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Blurb, name: blurb, widget: text}
+  
       - file: "site/hugo.toml"
         label: Hugo Config
         name: config
