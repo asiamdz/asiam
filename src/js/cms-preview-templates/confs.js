@@ -23,13 +23,13 @@ export default class ConfsPreview extends React.Component {
 
     const image = getAsset(entry.getIn(["data", "image"]));
     const entryConfs = entry.getIn(["data", "confs"]);
-    const confs = entryValues ? entryValues.toJS() : [];
+    const confs = entryConfs ? entryConfs.toJS() : [];
 
     return <div>
       <Jumbotron image={image} title={entry.getIn(["data", "title"])} />
       <div className="bg-off-white pv4">
         <div className="mw7 center ph3 pt4">
-          {values.map(({text, heading, imageUrl}, i) =>
+          {confs.map(({text, heading, imageUrl}, i) =>
             <MediaBlock key={i} text={text} heading={heading} imageUrl={imageUrl} reverse={i % 2 === 0} />
           )}
         </div>
